@@ -1,0 +1,26 @@
+{
+    "redis": {
+      "host": "127.0.0.1",
+      "port": 6379,
+      "ttl" : 25200
+    },
+    "cookie":{
+        "claveSecreta" : "claveSecreta"
+    },
+    "express":{
+        "port" : 3000,
+        "secret": "secretapp",
+        "resave": false,
+        "saveUninitialized" : true,
+        "maxAge" : 25200000 
+
+    },
+    "sequelize":{
+        "dataBase" : "test",
+        "user" : "root",
+        "password" : "password",
+        "host": "127.0.0.1",
+        "dialect": "mysql", 
+        "logging":false   
+    }
+}
