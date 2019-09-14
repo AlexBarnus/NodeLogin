@@ -132,7 +132,7 @@ app.get('/logout',(req,res) => {
 
     }
     else
-    res.status(200).json("No esta logado en estos momentos.");
+    res.status(200).json("No está logado en estos momentos.");
     
 })
 

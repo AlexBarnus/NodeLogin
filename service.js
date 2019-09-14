@@ -4,9 +4,9 @@ const {models} = require('./models')
 const validateLogin = (userName,password) => {
     return new Sequelize.Promise((resolve,reject) => {
         if(typeof userName === "undefined" || userName === "")
-            reject(new Error('Falta el parametro <userName>'));
+            reject(new Error('Falta el parámetro <userName>'));
         else if(typeof password === "undefined" || password === "")
-            reject(new Error('Falta el parametro <password>'));     
+            reject(new Error('Falta el parámetro <password>'));     
         else
             resolve({userName: userName, password:password});            
     })

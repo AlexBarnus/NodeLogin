@@ -7,8 +7,8 @@ const username = "Alex";
 const password = "boss";
 const urlBase =  "http://localhost:3000/"
 
- describe('Metodo del api para controlar login', function() {
-    it("Debe permitir realizar login con los datos validos", async(done) => {
+ describe('Método del api para controlar login', function() {
+    it("Debe permitir realizar login con los datos válidos", async(done) => {
 
         var dataObj = {'username' : username, 'password' : password};
 
@@ -23,7 +23,7 @@ const urlBase =  "http://localhost:3000/"
         });
     });
 
-    it("Debe devolver login incorrecto cuando los datos no son validos", async(done) => {
+    it("Debe devolver login incorrecto cuando los datos no son válidos", async(done) => {
 
         var dataObj = {'username' : username, 'password' : password + "fake"};
 
@@ -48,7 +48,7 @@ const urlBase =  "http://localhost:3000/"
             json:true
         },function(err,res,body){
                 expect(res.statusCode).toBe(500);
-                expect(res.body.message).toContain("Falta el parametro ");
+                expect(res.body.message).toContain("Falta el parámetro ");
                 done();
         });
     });
@@ -56,7 +56,7 @@ const urlBase =  "http://localhost:3000/"
 
 }) 
 
-describe("Metodo para obtener las sesiones de un usuario", function(){
+describe("Método para obtener las sesiones de un usuario", function(){
     
     it("Debe devolver status 403 al no estar logado", async(done) => {
 
@@ -74,7 +74,7 @@ describe("Metodo para obtener las sesiones de un usuario", function(){
 
 })
 
-describe("Metodo para obtener los usuarios logados", function(){
+describe("Método para obtener los usuarios logados", function(){
     
     it("Debe devolver status 403 al no estar logado", async(done) => {
 
@@ -89,13 +89,13 @@ describe("Metodo para obtener los usuarios logados", function(){
 
 })
 
-describe("Metodo para hacer logout", function(){
+describe("Método para hacer logout", function(){
     
-    it("Debe devolver no esta logado en estos momentos", async(done) => {
+    it("Debe devolver no está logado en estos momentos", async(done) => {
           
                 request.get(urlBase + "logout", function(err,res,body){
                     expect(res.statusCode).toBe(200);    
-                    expect(res.body).toContain("No esta logado en estos momentos.");            
+                    expect(res.body).toContain("No está logado en estos momentos.");            
                     done();
                 });
           
